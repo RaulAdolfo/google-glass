@@ -6,6 +6,7 @@
 }
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #dddddd; /*Muda a cor de fundo*/
     color: rgba(0, 0, 0, 100%); /*Muda a cor da fonte*/
 }
@@ -21,6 +22,18 @@ div#interface {
 p {
     text-align: justify; /*Muda o alinhamento do texto*/
     text-indent: 40px; /*Cria um espaço na primeira linha do paragrafo*/
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #404040;
+    transition: 0.5;
 }
 
 /* Formatação do cabeçalho */
@@ -126,10 +139,42 @@ nav#menu a:hover {
 /* Formatação da Section, Tabela, Aside e Footer */
 section#corpo {
     display: block;
-    width: 520px;
+    width: 500px;
     float: left;
     border-right: 1px solid #606060;
     padding-right: 15px;
+}
+
+article#noticia-principal h2 {
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color:#606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.direita {
+    text-align: right;
+}
+
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+header#cabecalho-artigo h3 {
+    font-size: 12px;
+    color: #606060;
 }
 
 table#tabelaspec {
@@ -175,6 +220,24 @@ aside#lateral {
     display: block;
     width: 350px;
     float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,50%);
+}
+
+aside#lateral h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color:#606060;
+    margin-top: 0px;
+}
+
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
 }
 
 footer#rodape {
