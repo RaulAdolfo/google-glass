@@ -2,13 +2,13 @@
 
 section#conteudo {
     width: 1000px;
-    margin: auto;
+    margin: auto; /* Delimita a margem externa da seção */
 }
 
 iframe#frame-spec {
     width: 380px;
     height: 300px;
-    border: none;
+    border: none; /*  Define o estilo da borda do iframe */
 }
 
 iframe#frame-spec::-webkit-scrollbar {
