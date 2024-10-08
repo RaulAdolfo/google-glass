@@ -1,27 +1,33 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
 @font-face {
     font-family: 'FonteLogo';
     src: url("../_fonts/bubblegum-sans-regular.otf");
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif; /*Define a fonte do Body*/
-    background-color: #dddddd; /*Muda a cor de fundo*/
-    color: rgba(0, 0, 0, 100%); /*Muda a cor da fonte*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*Define a fonte do Body*/
+    background-color: #dddddd;
+    /*Muda a cor de fundo*/
+    color: rgba(0, 0, 0, 100%);
+    /*Muda a cor da fonte*/
 }
 
 div#interface {
     width: 900px;
     background-color: white;
     margin: -20px auto 0px auto;
-    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
     padding: 10px;
 }
 
 p {
-    text-align: justify; /*Muda o alinhamento do texto*/
-    text-indent: 40px; /*Cria um espaço na primeira linha do paragrafo*/
+    text-align: justify;
+    /*Muda o alinhamento do texto*/
+    text-indent: 40px;
+    /*Cria um espaço na primeira linha do paragrafo*/
 }
 
 a {
@@ -30,7 +36,8 @@ a {
     font-weight: bolder;
 }
 
-a:hover { /*Hover significa passar o mouse sobre*/
+a:hover {
+    /*Hover significa passar o mouse sobre*/
     text-decoration: underline;
     color: #404040;
     transition: 0.5;
@@ -38,7 +45,7 @@ a:hover { /*Hover significa passar o mouse sobre*/
 
 /* Formatação do cabeçalho */
 
-header#cabecalho img#icone{
+header#cabecalho img#icone {
     position: absolute;
     left: 950px;
     top: 50px;
@@ -47,19 +54,21 @@ header#cabecalho img#icone{
 header#cabecalho {
     border-bottom: 1px #606060 solid;
     height: 150px;
-    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 90px; /*Imagem de fundo, no-repeat evita a imagem de se repetir*/
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 90px;
+    /*Imagem de fundo, no-repeat evita a imagem de se repetir*/
 }
 
-header#cabecalho h1{
+header#cabecalho h1 {
     font-family: 'FonteLogo', Helvetica, sans-serif;
     font-size: 30px;
     color: #606060;
-    text-shadow: 1px 1px 1px rgba(0,0,0,6); /*Cria uma sombra para o texto*/
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 6);
+    /*Cria uma sombra para o texto*/
     padding: 0px;
     margin-bottom: 0px;
 }
 
-header#cabecalho h2{
+header#cabecalho h2 {
     font-family: "Titillium Web", sans-serif;
     color: #888888;
     font-size: 15px;
@@ -70,9 +79,11 @@ header#cabecalho h2{
 /* Formatação de imagens com legendas */
 
 figure.foto-legenda {
-    position: relative; /*Posição relativa interage apenas com o espaço daquela tag*/
+    position: relative;
+    /*Posição relativa interage apenas com o espaço daquela tag*/
     border: 8px solid white;
-    box-shadow: 1px 1px 4px black; /*cria uma sombra para a "box"*/
+    box-shadow: 1px 1px 4px black;
+    /*cria uma sombra para a "box"*/
 }
 
 figure.foto-legenda img {
@@ -82,14 +93,16 @@ figure.foto-legenda img {
 
 figure.foto-legenda figcaption {
     opacity: 0;
-    position: absolute; /*Posição absoluta interage com a página inteira*/
+    position: absolute;
+    /*Posição absoluta interage com a página inteira*/
     top: 0px;
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0, 0, 0, .4);
     color: white;
     width: 100%;
     height: 100%;
     padding: 10px;
-    box-sizing: border-box; /*Especifica o comportamento da altura e largura*/
+    box-sizing: border-box;
+    /*Especifica o comportamento da altura e largura*/
 }
 
 figure.foto-legenda:hover figcaption {
@@ -118,11 +131,11 @@ nav#menu li {
     transition: background-color 0.8s;
 }
 
-nav#menu li:hover{
+nav#menu li:hover {
     background-color: #606060;
 }
 
-nav#menu h1{
+nav#menu h1 {
     display: none;
 }
 
@@ -156,7 +169,7 @@ article#noticia-principal h2 {
 header#cabecalho-artigo h1 {
     font-family: 'FonteLogo', sans-serif;
     font-size: 20pt;
-    color:#606060;
+    color: #606060;
     margin-bottom: 0px;
     margin-top: 0px;
 }
@@ -223,13 +236,13 @@ aside#lateral {
     background-color: #dddddd;
     padding: 10px;
     margin-top: 10px;
-    box-shadow: 2px 2px 2px rgba(0,0,0,50%);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 50%);
 }
 
-aside#lateral h1{
+aside#lateral h1 {
     font-family: 'FonteLogo', sans-serif;
     font-size: 20pt;
-    color:#606060;
+    color: #606060;
     margin-top: 0px;
 }
 
