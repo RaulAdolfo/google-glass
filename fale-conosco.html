@@ -48,14 +48,15 @@
                     </hgroup>
                 </header>
                 <!--Label é uma etiqueta para referenciar outra tag através do ID, nesse caso ao clicar no texto, é marcado então o botão do "rádio"-->
-                <form action="">
+
+                <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com">
                     <fieldset id="usuario">
                         <legend>Identificação do Usuário</legend>
                         <p><label for="cNome">Nome:</label><input type="text" nome="tNome" id="cNome" size="40"
                                 maxlength="30" placeholder="Nome Completo" /></p>
                         <p><label for="cSenha">Senha:</label><input type="password" nome="tSenha" id="cSenha" size="8"
                                 maxlength="8" placeholder="8 digitos"></p>
-                        <p><label for="cEmail">E-mail:</label><input type="email" name="tEmail" id="cEmail" size="20"
+                        <p><label for="cMail">E-mail:</label><input type="email" name="tMail" id="cMail" size="20"
                                 maxlength="40" placeholder="anasilva@email.com"></p>
                         <fieldset>
                             <legend>Sexo</legend>
@@ -70,21 +71,40 @@
                                 maxlength="80" placeholder="Rua / Av / Travessa"></p>
                         <p><label for="cNum">Número:</label><input type="number" name="nNum" id="cNum" min="0"
                                 max="99999" placeholder="1081"></p>
-                        <p><label for="cEst">Estado:</label><input type="text" name="tEst" id="cEst" size="13"
-                                maxlength="80" placeholder="SP / BA / MG"></p>
-                        <p><label for="cCid">Cidade:</label><input type="text" name="tCid" id="cCid" size="40"
-                                maxlength="80" placeholder="Curitiba / Ribeirão Preto"></p>
+                        <p><label for="cEst">Estado:</label><select name="tEst" id="cEst">
+                                <optgroup label="Região Sudeste">
+                                    <option selected value="RJ">Rio de Janeiro</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="MG">Minas Gerais</option>
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="PR">Paraná</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                </optgroup>
+                            </select></p>
+                        <p><label for="cCid">Cidade:</label><input type="text" name="tCid" id="cCid" size="20"
+                                maxlength="40" placeholder="Sua Cidade" list="cidades"></p>
+                        <datalist id="cidades">
+                            <option value="Rio de Janeiro"></option>
+                            <option value="Nova Iguaçu"></option>
+                            <option value="Niterói"></option>
+                            <option value="Belford Roxo"></option>
+                        </datalist>
                     </fieldset>
                     <fieldset id="mensagem">
                         <legend>Mensagem do Usuário</legend>
-                        <p>Grau de Urgência:</p>
-                        <p>Mensagem:</p>
+                        <p><label for="cUrg">Grau de Urgência:</label>MIN<input type="range" name="tUrg" id="cUrg"
+                                min="0" max="10" step="2">MÁX</p>
+                        <p><label for="cMen">Mensagem:</label><textarea name="tMen" id="cMen" cols="45" rows="5"
+                                placeholder="Deixe aqui sua mensagem!"></textarea></p>
                     </fieldset>
                     <fieldset id="pedido">
                         <legend>Quero um Google Glass</legend>
                         <p>Gostaria de adquirir um Google Glass quando disponível</p>
-                        <p>Cor: <input type="text" name="tCor" id="cCor" size="20" maxlength="30"></p>
-                        <p>Quantidade:</p>
+                        <p><label for="cCor">Cor:</label><input type="text" name="tCor" id="cCor" size="20"
+                                maxlength="30"></p>
+                        <p>Quantidade: <input type="number" name="tQuant" id="cQuant" min="0" max="99999"></p>
                         <p>Preço Total: R$</p>
                     </fieldset>
 
