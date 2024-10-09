@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="/_css/form.css">
 </head>
 <script language="javascript" src="_javascript/funcoes.js"></script>
+<script>
+    function calc_total() {
+        var qtd = parseInt(document.getElementById('cQtd').value);
+        var tot = qtd * 1500;
+        document.getElementById('cTot').value = tot;
+    }
+</script>
 
 <body>
     <div id="interface">
@@ -36,9 +43,7 @@
                 </ul>
             </nav>
         </header>
-        <section id="corpo">
-
-            <article id="noticia-principal">
+             <article id="noticia-principal">
                 <header id="cabecalho-artigo">
                     <hgroup>
                         <h3>Fale Conosco > Contato</h3>
@@ -48,8 +53,7 @@
                     </hgroup>
                 </header>
                 <!--Label é uma etiqueta para referenciar outra tag através do ID, nesse caso ao clicar no texto, é marcado então o botão do "rádio"-->
-
-                <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com">
+                <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com" oninput="calc_total();">
                     <fieldset id="usuario">
                         <legend>Identificação do Usuário</legend>
                         <p><label for="cNome">Nome:</label><input type="text" nome="tNome" id="cNome" size="40"
@@ -58,7 +62,7 @@
                                 maxlength="8" placeholder="8 digitos"></p>
                         <p><label for="cMail">E-mail:</label><input type="email" name="tMail" id="cMail" size="20"
                                 maxlength="40" placeholder="anasilva@email.com"></p>
-                        <fieldset>
+                        <fieldset id="sexo">
                             <legend>Sexo</legend>
                             <input type="radio" name="tSexo" id="cMasc"> <label for="cMasc">Masculino</label><br />
                             <input type="radio" name="tSexo" id="CFem"> <label for="CFem">Feminino</label>
@@ -101,17 +105,20 @@
                     </fieldset>
                     <fieldset id="pedido">
                         <legend>Quero um Google Glass</legend>
-                        <p>Gostaria de adquirir um Google Glass quando disponível</p>
-                        <p><label for="cCor">Cor:</label><input type="text" name="tCor" id="cCor" size="20"
-                                maxlength="30"></p>
-                        <p>Quantidade: <input type="number" name="tQuant" id="cQuant" min="0" max="99999"></p>
-                        <p>Preço Total: R$</p>
+                        <p>
+                            <input type="checkbox" name="tPed" id="cPed" />
+                            <label for="cPed">Gostaria de
+                                adquirir um Google Glass quando disponível</label>
+                        </p>
+                        <p><label for="cCor">Cor:</label><input type="color" name="tCor" id="cCor" value="#0000FF"></p>
+                        <p><label for="cQtd">Quantidade:</label><input type="number" name="tQtd" id="cQtd" min="0"
+                                max="5" value="0"></p>
+                        <p><label for="cTot">Preço Total: R$</label><input type="text" name="tTot" id="cTot"
+                                placeholder="Total a pagar" readonly></p>
                     </fieldset>
-
-                    [BOTÃO ENVIAR]
+                    <input type="image" name="tEnviar" id="cEnviar" src="_imagens/botao-enviar.png" />
                 </form>
             </article>
-        </section>
         <footer id="rodape">
             <p>Copyright 2013 - by Gustavo Guanabara <br />
                 <a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> | <a
